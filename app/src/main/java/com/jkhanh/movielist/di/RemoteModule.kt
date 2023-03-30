@@ -1,6 +1,7 @@
 package com.jkhanh.movielist.di
 
 import com.google.gson.Gson
+import com.jkhanh.movielist.BuildConfig
 import com.jkhanh.movielist.data.remote.MovieService
 import dagger.Module
 import dagger.Provides
