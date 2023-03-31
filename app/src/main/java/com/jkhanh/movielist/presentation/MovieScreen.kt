@@ -111,7 +111,7 @@ fun MovieItem(movie: Search) {
     ) {
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
-                .data(movie.Poster)
+                .data(movie.poster)
                 .build(),
             contentScale = ContentScale.FillWidth,
             contentDescription = null,
@@ -126,12 +126,12 @@ fun MovieItem(movie: Search) {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
-                text = movie.Title,
+                text = movie.title,
                 modifier = Modifier.width(120.dp),
                 maxLines = 3,
                 overflow = TextOverflow.Ellipsis
             )
-            Text(text = movie.Year)
+            Text(text = movie.year)
         }
     }
 }

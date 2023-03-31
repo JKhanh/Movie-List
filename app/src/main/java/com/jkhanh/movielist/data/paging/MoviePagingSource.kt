@@ -22,9 +22,9 @@ class MoviePagingSource(
             val response = movieService.searchMovieByName(page = page, s = searchKey)
 
             LoadResult.Page(
-                data = response.Search,
+                data = response.searches,
                 prevKey = if (page == 1) null else page.minus(1),
-                nextKey = if (response.Search.isEmpty()) null else page.plus(1),
+                nextKey = if (response.searches.isEmpty()) null else page.plus(1),
             )
         } catch (e: Exception) {
             LoadResult.Error(e)
